@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khensani Ruth | HTML5 Content & Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header, footer {
+      background: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      padding: 1em;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      animation: slideUp 0.8s ease-in-out;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #4CAF50;
+      padding-bottom: 0.3em;
+      margin-bottom: 0.5em;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.95em;
+      transition: all 0.3s ease;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #e8f5e9;
+      transition: background-color 0.3s ease;
+    }
+    fieldset {
+      margin-bottom: 1em;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+    label {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #4CAF50;
+      color: white;
+      padding: 0.7em 1.5em;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 1em;
+      display: block;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      background: #45a049;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    iframe {
+      width: 100%;
+      height: 215px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 0.5em;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+      table, th, td {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Khensani Ruth | HTML5 Content & Forms Demo</h1>
+</header>
+
+<main>
+  <!-- Section 1: List -->
+  <section>
+    <h2>My Daily Tasks</h2>
+    <ul>
+      <li>Review my coding projects</li>
+      <li>Practice HTML, CSS, and JavaScript</li>
+      <li>Attend PLP online classes</li>
+      <li>Update my Task Manager app</li>
+      <li>Read a tech blog or watch a tutorial</li>
+    </ul>
+  </section>
+
+  <!-- Section 2: Table -->
+  <section>
+    <h2>My Weekly Study Schedule</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Activity</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Web Development Practice</td>
+          <td>09:00 - 11:00</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>PLP Group Discussion</td>
+          <td>14:00 - 16:00</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Task Manager App Updates</td>
+          <td>10:00 - 12:00</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Portfolio Website Improvements</td>
+          <td>09:30 - 11:30</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Review & Submit Assignments</td>
+          <td>15:00 - 17:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section 3: Media -->
+  <section>
+    <h2>My Motivation</h2>
+    <iframe src="https://www.youtube.com/embed/v7XXvlPqWpY" allowfullscreen></iframe>
+  </section>
+
+  <!-- Section 4: HTML5 Form -->
+  <section>
+    <h2>Portfolio Registration Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" 
+               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="username">Preferred Username:</label>
+        <input type="text" id="username" name="username" required minlength="5">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" required> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select your country</option>
+          <option value="sa">South Africa</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+
+        <label>
+          <input type="checkbox" name="terms" required> I agree to the Terms & Conditions
+        </label>
+      </fieldset>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Khensani Ruth | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
